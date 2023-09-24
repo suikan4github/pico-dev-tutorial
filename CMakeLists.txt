@@ -37,7 +37,7 @@ set(PICO_SDK_FETCH_FROM_GIT on)
 # note: this must happen before project()
 include(pico_sdk_import.cmake)
 
-project(my_project)
+project(tutorial)
 
 # initialize the Raspberry Pi Pico SDK
 pico_sdk_init()
@@ -47,15 +47,15 @@ pico_sdk_init()
 # The original of this file can be found at : 
 # https://github.com/raspberrypi/pico-examples/blob/master/blink/CMakeLists.txt
 
-add_executable(blink
+add_executable("${PROJECT_NAME}"
         main.cpp
         )
 
 # pull in common dependencies
-target_link_libraries(blink pico_stdlib)
+target_link_libraries("${PROJECT_NAME}" pico_stdlib)
 
 # create map/bin/hex file etc.
-pico_add_extra_outputs(blink)
+pico_add_extra_outputs("${PROJECT_NAME}")
 
 # The Following command makes error outside the pico-examples framework. 
 # So removed. 
