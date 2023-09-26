@@ -22,10 +22,11 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWIS
 THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ]]
 
+
 # Newest version of this file can be found at : 
 # https://github.com/raspberrypi/pico-sdk/blob/master/external/pico_sdk_import.cmake
 
-# This is a copy of <PICO_SDK_PATH>/external/pico_sdk_import.cmake
+# This is a copy of https://github.com/raspberrypi/pico-sdk/blob/1.5.1/external/pico_sdk_import.cmake
 
 # This can be dropped into an external project to help locate this SDK
 # It should be include()ed prior to project()

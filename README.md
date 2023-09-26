@@ -29,7 +29,11 @@ cmake --build build
 ```
 コンフィギュレーション時にSDKをダウンロードするので、少し時間がかかります。ビルドはすぐ終わります。
 
-Visual Studio Codeを使う場合はCtrl-Shift-Pでコマンドパレットを出し、CMake: Configureを実行してください。コンフィギュレーションが終わったのち、ステータスバーのビルド・アイコンをクリックしてビルドします。
+Visual Studio Codeを使う場合はCtrl-Shift-Pでコマンドパレットを出し、
+```
+CMake: Configure
+```
+を実行してください。コンフィギュレーションが終わったのち、ステータスバーのビルド・アイコンをクリックしてビルドします。
 
 buildディレクトリの中にtutrial.u2fファイルができますので、それをRaspberry Pi Picoのストレージにコピーしてください。LEDが点滅を始めます。
 
@@ -43,4 +47,4 @@ buildディレクトリの中にtutrial.u2fファイルができますので、�
 
 このプロジェクトは特記ない限り[MITライセンス](LICENSE)が定める要件に従って配布しています。
 
-[pico_sdk_import.cmake](pico_sdk_import.cmake)ファイルは[RaspberryPiのpico-sdk](https://github.com/raspberrypi/pico-sdk)よりコピーしたものです。このファイルはBSD 3-Clause "New" or "Revised" Licenseが定める要件により、Raspberry Pi (Trading) Ltd.よりライセンスされています。詳しくは当該ファイルのライセンス要件を読んでください。
+[pico_sdk_import.cmake](pico_sdk_import.cmake)ファイルは[RaspberryPiのpico-sdk v1.5.1](https://github.com/raspberrypi/pico-sdk/blob/1.5.1/external/pico_sdk_import.cmake)よりコピーしたものです。このファイルはBSD 3-Clause "New" or "Revised" Licenseが定める要件により、Raspberry Pi (Trading) Ltd.よりライセンスされています。詳しくは当該ファイルのライセンス要件を読んでください。
