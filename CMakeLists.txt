@@ -44,19 +44,4 @@ pico_sdk_init()
 
 # rest of your project
 
-# The original of this file can be found at : 
-# https://github.com/raspberrypi/pico-examples/blob/master/blink/CMakeLists.txt
-
-add_executable("${PROJECT_NAME}"
-        main.cpp
-        )
-
-# pull in common dependencies
-target_link_libraries("${PROJECT_NAME}" pico_stdlib)
-
-# create map/bin/hex file etc.
-pico_add_extra_outputs("${PROJECT_NAME}")
-
-# The Following command makes error outside the pico-examples framework. 
-# So removed. 
-# example_auto_set_url(blink)
+include_directories("src")

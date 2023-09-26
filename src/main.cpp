@@ -1,6 +1,10 @@
 // Include RPi Pico SDK
 #include "pico/stdlib.h"
 
+// Include private headers.
+#include "counter.hpp"
+#include "four2sevendecoder.hpp"
+
 int main() {
   // Use RasPi Pico on-board LED.
   // 1=> Turn on, 0 => Turn pff.
@@ -12,6 +16,9 @@ int main() {
   const uint SEG_a = 17;   // LED pin 7
   const uint SEG_f = 18;   // LED pin 9
   const uint SEG_g = 19;   // LED pin 10
+
+  Counter10 counter;
+  Four2SevenDecoder decoder;
 
   // Initializing the GPIO pin and set it output.
   gpio_init(SEG_a);
@@ -42,25 +49,24 @@ int main() {
   gpio_put(SEG_dp, 1);
 
   while (true) {
-    // Turn LED on
-    gpio_put(SEG_a, 1);
-    gpio_put(SEG_b, 1);
-    gpio_put(SEG_c, 1);
-    gpio_put(SEG_d, 1);
-    gpio_put(SEG_e, 1);
-    gpio_put(SEG_f, 1);
-    gpio_put(SEG_g, 1);
-    gpio_put(SEG_dp, 1);
-    sleep_ms(500);
-    // Turn LED off
-    gpio_put(SEG_a, 0);
-    gpio_put(SEG_b, 0);
-    gpio_put(SEG_c, 0);
-    gpio_put(SEG_d, 0);
-    gpio_put(SEG_e, 0);
-    gpio_put(SEG_f, 0);
-    gpio_put(SEG_g, 0);
-    gpio_put(SEG_dp, 0);
+    uint32_t value;
+    uint32_t segments;
+
+    value = counter.GetValue();
+
+    segments = decoder.decode(value,  // value of 0..9
+                              false   // no peiriod
+
+                              gpio_put(SEG_a, (segments >> 0) & 1);
+                              gpio_put(SEG_b, (segments >> 1) & 1);
+                              gpio_put(SEG_c, (segments >> 2) & 1);
+                              gpio_put(SEG_d, (segments >> 3) & 1);
+                              gpio_put(SEG_e, (segments >> 4) & 1);
+                              gpio_put(SEG_f, (segments >> 5) & 1);
+                              gpio_put(SEG_g, (segments >> 6) & 1);
+                              gpio_put(SEG_dp, (segments >> 7) & 1);
+
+    );
     sleep_ms(500);
   }
 }
