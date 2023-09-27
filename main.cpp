@@ -18,7 +18,8 @@ int main() {
   const uint SEG_g = 19;   // LED pin 10
 
   Counter10 counter;
-  Four2SevenDecoder decoder;
+  Four2SevenDecoder decoder(Four2SevenDecoder::anode,
+                            Four2SevenDecoder::positive);
 
   // Initializing the GPIO pin and set it output.
   gpio_init(SEG_a);
@@ -51,11 +52,10 @@ int main() {
   while (true) {
     uint32_t value;
     uint32_t segments;
-
     value = counter.GetValue();
 
     segments = decoder.decode(value,  // value of 0..9
-                              false   // no peiriod
+                              true    // no peiriod
     );
 
     gpio_put(SEG_a, (segments >> 0) & 1);
