@@ -2,8 +2,8 @@
 #include "pico/stdlib.h"
 
 // Include private headers.
-#include "counter.hpp"
-#include "four2sevendecoder.hpp"
+#include "src/counter.hpp"
+#include "src/four2sevendecoder.hpp"
 
 int main() {
   // Use RasPi Pico on-board LED.
@@ -56,17 +56,17 @@ int main() {
 
     segments = decoder.decode(value,  // value of 0..9
                               false   // no peiriod
-
-                              gpio_put(SEG_a, (segments >> 0) & 1);
-                              gpio_put(SEG_b, (segments >> 1) & 1);
-                              gpio_put(SEG_c, (segments >> 2) & 1);
-                              gpio_put(SEG_d, (segments >> 3) & 1);
-                              gpio_put(SEG_e, (segments >> 4) & 1);
-                              gpio_put(SEG_f, (segments >> 5) & 1);
-                              gpio_put(SEG_g, (segments >> 6) & 1);
-                              gpio_put(SEG_dp, (segments >> 7) & 1);
-
     );
+
+    gpio_put(SEG_a, (segments >> 0) & 1);
+    gpio_put(SEG_b, (segments >> 1) & 1);
+    gpio_put(SEG_c, (segments >> 2) & 1);
+    gpio_put(SEG_d, (segments >> 3) & 1);
+    gpio_put(SEG_e, (segments >> 4) & 1);
+    gpio_put(SEG_f, (segments >> 5) & 1);
+    gpio_put(SEG_g, (segments >> 6) & 1);
+    gpio_put(SEG_dp, (segments >> 7) & 1);
+
     sleep_ms(500);
   }
 }

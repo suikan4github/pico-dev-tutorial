@@ -1,4 +1,4 @@
-#include <stdint.h>
+#include "four2sevendecoder.hpp"
 
 uint32_t Four2SevenDecoder ::decode(uint32_t code, bool period) {
   uint32_t segments = 0;

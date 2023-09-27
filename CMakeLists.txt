@@ -43,5 +43,20 @@ project(tutorial)
 pico_sdk_init()
 
 # rest of your project
+# The original of this file can be found at : 
+# https://github.com/raspberrypi/pico-examples/blob/master/blink/CMakeLists.txt
 
-include_directories("src")
+add_subdirectory("src")
+
+
+add_executable("${PROJECT_NAME}"
+        main.cpp
+        )
+
+# pull in common dependencies
+target_link_libraries("${PROJECT_NAME}" pico_stdlib sub)
+
+
+# create map/bin/hex file etc.
+pico_add_extra_outputs("${PROJECT_NAME}")
+
