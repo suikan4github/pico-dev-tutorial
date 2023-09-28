@@ -2,8 +2,8 @@
 #include "pico/stdlib.h"
 
 // Include private headers.
-#include "src/counter.hpp"
-#include "src/four2sevendecoder.hpp"
+#include "counter.hpp"
+#include "four2sevendecoder.hpp"
 
 int main() {
   // Use RasPi Pico on-board LED.
