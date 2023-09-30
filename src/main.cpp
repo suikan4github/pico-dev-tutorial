@@ -40,6 +40,8 @@ int main() {
   gpio_set_dir(SEG_g, GPIO_OUT);
   gpio_set_dir(SEG_dp, GPIO_OUT);
 
+  // Initial value of outout. The anode common 7segments
+  // LED must set output 1 to make it blank.
   gpio_put(SEG_a, 1);
   gpio_put(SEG_b, 1);
   gpio_put(SEG_c, 1);
@@ -50,14 +52,18 @@ int main() {
   gpio_put(SEG_dp, 1);
 
   while (true) {
-    uint32_t value;
-    uint32_t segments;
+    uint32_t value;     //
+    uint32_t segments;  // segment pattern.
+
+    // run counter
     value = counter.GetValue();
 
+    // decode the obtained value.
     segments = decoder.decode(value,  // value of 0..9
                               true    // no peiriod
     );
 
+    // drive pins.
     gpio_put(SEG_a, (segments >> 0) & 1);
     gpio_put(SEG_b, (segments >> 1) & 1);
     gpio_put(SEG_c, (segments >> 2) & 1);

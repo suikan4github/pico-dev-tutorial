@@ -4,7 +4,12 @@ class Four2SevenDecoder {
  public:
   enum Common { anode, cathode };
   enum Logic { positive, negative };
-  Four2SevenDecoder(Common common, Logic logic);
+
+  Four2SevenDecoder(Common common = anode,  // 7segments LED type
+                    Logic logic = positive  // driver logic.
+  );
+
+  // output bit7:0 == dp,g,f,...a
   virtual uint32_t decode(uint32_t code, bool period);
 
  private:
