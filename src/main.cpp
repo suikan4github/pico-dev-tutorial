@@ -8,14 +8,14 @@
 int main() {
   // Use RasPi Pico on-board LED.
   // 1=> Turn on, 0 => Turn pff.
-  const uint SEG_e = 11;   // LED pin 1
-  const uint SEG_d = 12;   // LED pin 2
-  const uint SEG_c = 13;   // LED pin 4
-  const uint SEG_dp = 14;  // LED pin 5
-  const uint SEG_b = 16;   // LED pin 6
-  const uint SEG_a = 17;   // LED pin 7
-  const uint SEG_f = 18;   // LED pin 9
-  const uint SEG_g = 19;   // LED pin 10
+  const uint SEG_e = 16;   // LED pin 1
+  const uint SEG_d = 17;   // LED pin 2
+  const uint SEG_c = 18;   // LED pin 4
+  const uint SEG_dp = 19;  // LED pin 5
+  const uint SEG_b = 11;   // LED pin 6
+  const uint SEG_a = 12;   // LED pin 7
+  const uint SEG_f = 13;   // LED pin 9
+  const uint SEG_g = 14;   // LED pin 10
 
   Counter10 counter;
   Four2SevenDecoder decoder(Four2SevenDecoder::anode,
