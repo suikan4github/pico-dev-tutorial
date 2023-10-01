@@ -1,12 +1,10 @@
-# pico-dev-smart
+# pico-dev-tutorial
 Showing smart way to development
 
-# 詳細
-このプロジェクトは組み込みプログラムの開発の説明のために公開しています。
+# プロジェクト詳細
+このプロジェクトは組み込みプログラムの開発の説明のために公開しています。書籍との組み合わせを予定していますのでリポジトリ単体は意味を持ちません。
 
-「プログラム開発の説明」が何かに関してはmainブランチの最新コミットを参照してください。
-
-# ターゲットと動作
+# tutorial_02
 ターゲット・ボードは[Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/)です。プロジェクトを通してWi-Fiは使いません。
 
 このプロジェクトはプログラムをロードすると7セグメントLEDディスプレイがカウントを繰り返すプログラムです。
