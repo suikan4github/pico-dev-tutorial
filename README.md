@@ -1,11 +1,11 @@
 # pico-dev-tutorial
 Showing smart way to development
 
-# 詳細
+# プロジェクト詳細
 このプロジェクトは組み込みプログラムの開発の説明のために公開しています。
 書籍との組み合わせを予定していますのでリポジトリ単体は意味を持ちません。
 
-# ターゲットと動作
+# tutorial_01
 ターゲット・ボードは[Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/)です。プロジェクトを通してWi-Fiは使いません。
 
 このプロジェクトはプログラムをロードするとLEDが点滅するだけの簡単なプログラムです。
