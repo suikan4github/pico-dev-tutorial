@@ -58,7 +58,7 @@ int main() {
 
     // decode the obtained value to segment pattern.
     uint32_t segments = decoder.decode(value,  // value of 0..9
-                                       true    // no peiriod
+                                       true    // no period
     );
 
     // drive pins.

@@ -35,7 +35,7 @@ CMake: Configure
 ```
 を実行してください。コンフィギュレーションが終わったのち、ステータスバーのビルド・アイコンをクリックしてビルドします。
 
-build/srcディレクトリの中にtutrial.u2fファイルができますので、それをRaspberry Pi Picoのストレージにコピーしてください。LEDが点滅を始めます。
+build/srcディレクトリの中にtutrial.u2fファイルができますので、それをRaspberry Pi Picoのストレージにコピーしてください。LEDがカウントを始めます。
 
 
 # 貢献
