@@ -9,6 +9,9 @@ Showing smart way to development
 
 このプロジェクトはプログラムをロードすると7セグメントLEDディスプレイがカウントを繰り返すプログラムです。
 
+回路図は以下の通りです。
+
+![](/image/schematics.png)
 # ビルド方法
 ビルド環境は以下の通りです:
 - Ubuntu 
